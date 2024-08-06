@@ -3,12 +3,20 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <View>
-      <Text>Profile</Text>
+    <View style={styles.container}>
+      <Text>Bienvenido a TU PERFIL </Text>
     </View>
   )
 }
 
 export default Profile
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  }
+})
+
+// rnfes

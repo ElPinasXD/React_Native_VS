@@ -3,26 +3,25 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors:{
-        primary: '#161622',
-        secondary : {
-          DEFAULT : "#FF9C01",
-          100: "#FF9001",
-          200: "#FF8E01",
+      colors:{ 
+        primary: '#161622', //Color primario
+        secondary : { 
+          DEFAULT : "#FF9C01", // Color secundario por defecto
+          100: "#FF9001", // Intensidad y transparencia
+          200: "#FF8E01", // Variacion del segundo color
         },
-        black: {
+        black: { // Un objeto llamado black
           DEFAULT: "#000",
           100: "#1E1E2D",
           200: "#232533",
         },
-        gray:{
+        gray:{ // Un objeto llamado gray
           100:"#CDCDE0"
         },
       },
-      fontFamily: {
+      fontFamily: { // Definimos el tipo y sus variaciones de la plantilla
         pthin:["Poppins-Thin","sans-serif"],
-        pextralight:["Poppins-ExtraLight",
-          "sans-serif"],
+        pextralight:["Poppins-ExtraLight","sans-serif"],
         plight:["Poppins-Light", "sans-serif"],
         pregular:["Poppins-Regular", "sans-serif"]  ,
         pmedium:["Poppins-Medium", "sans-serif"],
@@ -31,7 +30,6 @@ module.exports = {
         pextrabold:["Poppins-ExtraBold", "sans-serif"],
         pblack:["Poppins-Black", "sans-serif"],
       },
-
     },
   },
   plugins: [],
