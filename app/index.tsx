@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Hola, mi nombre es Andrés Felipe Cadena Castillo de la ficha 2902082</Text>
+      <Text>Esteban Piñeros</Text>
     </View>
   );
 }
