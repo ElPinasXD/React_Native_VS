@@ -7,12 +7,12 @@ import { Link } from "expo-router";
 export default function App() {
   return (
     <View className="felx-1 items-center justify-center bg-black ">
-      <Text className="text-3xl color-white">Estoy en INDEX</Text>
+      <Text className="text-3xl color-white font-pblack">Estoy en INDEX</Text>
       <StatusBar style='auto' />
       <Link href="/profile" style={{color: 'green', marginTop: 20, fontSize: 30}}
       >Perfil</Link> 
-
-
+      <Link href="/home" style={{color: 'blue', marginTop: 20, fontSize: 30}}
+      > Home</Link>
       <Link href= "/Register" style={{color: 'red',marginTop: 20, fontSize: 30 }}
       >Registro</Link>
     </View>
