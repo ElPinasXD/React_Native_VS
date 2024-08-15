@@ -3,7 +3,7 @@ import React from 'react'
 
 const Bookmark = () => {
   return (
-    <View>
+    <View className="flex-1 items-center justify-center bg-white">
       <Text>Bookmark</Text>
     </View>
   )
@@ -11,4 +11,3 @@ const Bookmark = () => {
 
 export default Bookmark
 
-const styles = StyleSheet.create({})

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <View>
+    <View className="flex-1 items-center justify-center bg-white">
       <Text>Home</Text>
     </View>
   )
@@ -11,4 +11,3 @@ const Home = () => {
 
 export default Home
 
-const styles = StyleSheet.create({})
