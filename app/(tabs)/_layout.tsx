@@ -1,24 +1,26 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, ImageSourcePropType } from 'react-native';
 import { Tabs } from 'expo-router'; // Asegúrate de que este import sea correcto
 import React from 'react';
 import { icons } from '../../constants';
 
+
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className='items-center justify-center gap-2'>
-      <Image 
-        source={icon}
-        resizeMode='contain'
-        tintColor={color}
-        className='w-6 h-6'
-      />
-      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{ color }}>
-        {name}
-      </Text>
-    </View>
-  );
-}
+    <View className= "items-center justify-center gap-2">
+    <Image
+    source={icon}
+    resizeMode="contain"
+    tintColor={color}
+    className="w-6 h-6"
+    />
 
+<Text className={`${focused ? 'font-psemibold':
+  'font-pregular'}text-xs`} style={{color: color}}>
+      {name}
+    </Text>
+  </View>
+) 
+}
 
 /* Como esta en el video
  <View className= "items-center justify-center gap-2">
@@ -35,6 +37,48 @@ const TabIcon = ({ icon, color, name, focused }) => {
       </Text>
     </View>
   ) 
+
+
+
+
+  <View className='items-center justify-center gap-2'>
+      <Image 
+        source={icon}
+        resizeMode='contain'
+        tintColor={color}
+        className='w-6 h-6'
+      />
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{ color }}>
+        {name}
+      </Text>
+    </View>
+
+
+
+
+
+  interface TabIconProps {
+  icon: ImageSourcePropType; // Cambia 'any' a 'ImageSourcePropType' para mayor especificidad
+  color: string;
+  name: string;
+  focused: boolean;
+}
+
+const TabIcon: React.FC<TabIconProps> = ({ icon, color, name, focused }) => {
+  return (
+    <View className='items-center justify-center gap-2'>
+      <Image 
+        source={icon}
+        resizeMode='contain'
+        style={{ tintColor: color, width: 24, height: 24 }} // Ajusta el tamaño si es necesario
+      />
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{ color }}>
+        {name}
+      </Text>
+    </View>
+  );
+}
+}
  */
 
 const TabsLayout = () => {
@@ -48,7 +92,7 @@ const TabsLayout = () => {
           backgroundColor: '#000000',
           borderTopWidth: 1,
           borderTopColor: '#232533',
-          height: 84,
+          height: 80,
         }
       }}
     >
@@ -70,7 +114,7 @@ const TabsLayout = () => {
       <Tabs.Screen 
         name='bookmark'
         options={{
-          title: 'bookmark',
+          title: 'Bookmark',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon 
@@ -85,7 +129,7 @@ const TabsLayout = () => {
       <Tabs.Screen 
         name='create'
         options={{
-          title: 'create',
+          title: 'Create',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon 
